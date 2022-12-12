@@ -1,0 +1,14 @@
+[profile.release]
+opt-level = 3
+codegen-units = 1   # codegen units for one package
+incremental = false
+debug = 0
+# use abort with backtrace
+rustflags = [
+  "-C",
+  "panic=abort",
+  "-C",
+  "force-unwind-tables=y",
+  "-Z",
+  "panic_abort_tests",
+]
